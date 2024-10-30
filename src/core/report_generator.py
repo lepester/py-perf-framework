@@ -17,6 +17,7 @@ def create_output_directories():
     # Create the main directory and subdirectories
     os.makedirs(csv_dir, exist_ok=True)
     os.makedirs(json_dir, exist_ok=True)
+    os.makedirs(xlsx_dir, exist_ok=True)
 
 def generate_report(all_results, all_metrics, filepath="../json-summary/unified_report.json"):
     """
