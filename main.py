@@ -1,5 +1,4 @@
 # main.py
-
 from tests.test_runner import run_tests
 from tests.load_test_runner import load_test_with_increasing_concurrency
 

@@ -6,8 +6,9 @@ import os
 def create_output_directories():
     # Define the main output directory and subdirectories
     main_dir = 'test-output'
-    csv_dir = os.path.join(main_dir, 'csv-report')
+    csv_dir = os.path.join(main_dir, 'csv-summary')
     json_dir = os.path.join(main_dir, 'json-summary')
+    xlsx_dir = os.path.join(main_dir, 'excel-report')
 
     # Check if the main directory exists
     if os.path.exists(main_dir):
