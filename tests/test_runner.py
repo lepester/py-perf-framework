@@ -11,7 +11,7 @@ from src.utils.data_parser import extract_response_times, calculate_percentile, 
 
 logger = setup_logger()
 
-def run_tests():
+def run_test():
     """
     Runs performance tests against the specified URL with concurrent requests,
     generates reports for analysis, and handles any errors during execution.
@@ -65,4 +65,4 @@ def run_tests():
     except Exception as e:
         logger.error(f"Error generating Excel or visualizations: {e}")
 
-    logger.info("Test completed. Reports generated even if tests failed.")
+    logger.info("Test run finished. Reports generated at test-output/excel-report and test-output/visualizations")

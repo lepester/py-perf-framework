@@ -7,6 +7,7 @@ A Python-based performance testing framework that allows users to run performanc
 - [Features](#features)
 - [Installation](#installation)
 - [Usage](#usage)
+- [Reporting](#reporting)
 
 
 ## Features
@@ -41,5 +42,11 @@ To run the performance tests, execute the following command in your terminal
 
 ### OR
    
-Click Play button in ```main.py```![image](https://github.com/user-attachments/assets/8668c877-555f-4746-8493-2a4e3bab3594)
+Click Play button in ```main.py```
 
+![img_6.png](img_6.png)
+
+## Reporting
+Report will be generated at the ending of a test run. It can be found in ```test-output``` directory
+
+![img_5.png](img_5.png)

@@ -6,9 +6,12 @@ import pandas as pd
 from openpyxl.styles import PatternFill
 import matplotlib.pyplot as plt
 
+from src.utils.logger import setup_logger
+
 matplotlib.use('Agg')  # Use a non-interactive backend for saving plots
 pd.set_option('future.no_silent_downcasting', True)  # Disable future warning for downcasting
 
+logger = setup_logger()
 
 def filter_results(results, success=True):
     """
@@ -75,7 +78,7 @@ def save_to_csv(results, filepath="test-output/csv-report/test_report.csv"):
         summary_df.to_csv(file, index=False, header=True)  # Write summary first
         df.to_csv(file, index=False, header=True)  # Then write the main data
 
-    print(f"CSV report saved successfully at: {filepath}")
+    logger.info(f"CSV report saved successfully at: {filepath}")
 
 
 def generate_visualizations(results):
@@ -134,7 +137,7 @@ def generate_visualizations(results):
     plt.savefig('test-output/visualizations/success_failure.png')
     plt.close()
 
-    print("Visualizations generated successfully.")
+    logger.info("Visualizations generated successfully.")
 
 
 def save_to_excel(results, filepath="test-output/excel-report/test_report.xlsx"):
@@ -166,9 +169,6 @@ def save_to_excel(results, filepath="test-output/excel-report/test_report.xlsx")
         success_fill = PatternFill(start_color='C6EFCE', end_color='C6EFCE', fill_type='solid')  # Light green
         failure_fill = PatternFill(start_color='FFC7CE', end_color='FFC7CE', fill_type='solid')  # Light red
 
-        # Print unique values to debug
-        print(df['success'].unique())  # Debugging line to check success values
-
         # Apply color formatting based on success/failure status
         for row in worksheet.iter_rows(min_row=2, max_col=len(df.columns)):  # Loop through all rows, excluding header
             success_value = row[2].value  # Get value of the 'success' column (4th column)
@@ -179,4 +179,4 @@ def save_to_excel(results, filepath="test-output/excel-report/test_report.xlsx")
                 for cell in row:
                     cell.fill = failure_fill  # Apply failure color
 
-    print(f"Excel report saved successfully at: {filepath}")
+    logger.info(f"Excel report saved successfully at: {filepath}")
