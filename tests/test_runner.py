@@ -1,11 +1,11 @@
 # tests/test_runner.py
 
 from concurrent.futures import ThreadPoolExecutor
-from config.config import BASE_URL, NUM_REQUESTS, CONCURRENT_USERS, TIMEOUT
-from core.request_handler import fetch_url
-from core.metrics import calculate_metrics
-from core.report_generator import generate_report
-from utils.data_parser import extract_response_times, calculate_percentile, save_to_csv
+from src.config.config import BASE_URL, NUM_REQUESTS, CONCURRENT_USERS, TIMEOUT
+from src.core.request_handler import fetch_url
+from src.core.metrics import calculate_metrics
+from src.core.report_generator import generate_report, create_output_directories
+from src.utils.data_parser import extract_response_times, calculate_percentile, save_to_csv
 
 
 def run_tests():
@@ -23,6 +23,9 @@ def run_tests():
     response_times = extract_response_times(results)
     ninety_percentile_time = calculate_percentile(response_times, 90)
     print(f"90th Percentile Response Time: {ninety_percentile_time:.2f} seconds")
+
+    # Generate test-output directories
+    create_output_directories()
 
     # Calculate metrics and save detailed CSV report
     metrics = calculate_metrics(results)

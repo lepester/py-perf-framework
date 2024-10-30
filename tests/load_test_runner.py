@@ -1,9 +1,9 @@
 from concurrent.futures import ThreadPoolExecutor
 
-from config.config import TIMEOUT, BASE_URL
-from core.metrics import calculate_metrics
-from core.report_generator import generate_report
-from core.request_handler import fetch_url
+from src.config.config import TIMEOUT, BASE_URL
+from src.core.metrics import calculate_metrics
+from src.core.report_generator import generate_report
+from src.core.request_handler import fetch_url
 
 
 def load_test_with_increasing_concurrency(start_users=1, max_users=20, step=5, requests_per_level=10):
