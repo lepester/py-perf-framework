@@ -44,9 +44,11 @@ To run the performance tests, execute the following command in your terminal
    
 Click Play button in ```main.py```
 
-![img_6.png](img_6.png)
+![img_6](https://github.com/user-attachments/assets/995c8694-60f4-4043-aed3-923c1546f1c9)
+
 
 ## Reporting
 Report will be generated at the ending of a test run. It can be found in ```test-output``` directory
 
-![img_5.png](img_5.png)
+![img_5](https://github.com/user-attachments/assets/573741f6-0a78-4766-86a2-63bd536f0a10)
+
