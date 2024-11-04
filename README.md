@@ -46,6 +46,10 @@ Click Play button in ```main.py```
 
 ![img_6](https://github.com/user-attachments/assets/995c8694-60f4-4043-aed3-923c1546f1c9)
 
+```create_output_directories():``` This function initializes the necessary directories (e.g., test-output) where test reports and data will be stored. It ensures that the directory structure is ready for storing the results before any tests are executed.
+
+```run_tests():``` This function triggers the main test suite. It performs concurrent requests to the specified URL, collects performance metrics, and generates various report files, including CSV, JSON, Excel, and visualization files. Reports are generated even if some requests fail, allowing for a comprehensive analysis of the performance test results.
+
 
 ## Reporting
 Report will be generated at the ending of a test run. It can be found in ```test-output``` directory
