@@ -1,6 +1,6 @@
 # Performance Testing Framework
 
-A Python-based performance testing framework that allows users to run performance tests on a specified website, generate detailed reports, and save results in both CSV and JSON formats.
+A Python-based performance testing framework that allows users to run performance tests on a specified website, generate detailed reports, and save results in ```.csv```, ```.xlsx```, ```.json``` formats.
 
 ## Table of Contents
 
