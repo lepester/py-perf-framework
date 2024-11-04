@@ -35,7 +35,7 @@ A Python-based performance testing framework that allows users to run performanc
    ```source .venv/bin/activate```
 4. Install the required dependencies
    ```pip install -r requirements.txt```
-
+5. Go to ```src/config/config.py``` and set target website through variable ```BASE_URL```
 ## Usage
 To run the performance tests, execute the following command in your terminal
    ```python main.py```
