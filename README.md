@@ -13,7 +13,7 @@ A Python-based performance testing framework that allows users to run performanc
 ## Features
 
 - Run performance tests with varying levels of concurrency.
-- Generate reports in CSV and JSON formats.
+- Generate reports in ```.csv```, ```.xlsx```, ```.json``` formats.
 - Automatically create directories for output reports.
 - Simple configuration and easy to extend.
 
